@@ -1,0 +1,229 @@
+/* Auth Page Styles */
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.auth-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--white-color);
+}
+
+.auth-right {
+    flex: 1;
+    background: url('../images/banking-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.auth-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(67, 97, 238, 0.8), rgba(67, 97, 238, 0.5));
+}
+
+.auth-quote {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    color: var(--white-color);
+}
+
+.auth-quote h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.auth-quote p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.auth-content {
+    max-width: 450px;
+    width: 100%;
+}
+
+.auth-logo {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.auth-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.auth-content p {
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-color);
+}
+
+.input-with-icon .toggle-password {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-light);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--gray-color);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: var(--secondary-color);
+}
+
+.password-strength {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.strength-bar {
+    height: 4px;
+    flex: 1;
+    background-color: var(--gray-light);
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.strength-bar:last-child {
+    margin-right: 0;
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-left: 10px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-checkbox input {
+    margin-right: 8px;
+}
+
+.form-checkbox label a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .auth-right {
+        display: none;
+    }
+    
+    .auth-left {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-content {
+        padding: 20px;
+    }
+    
+    .auth-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

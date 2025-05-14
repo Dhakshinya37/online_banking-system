@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking - Transactions</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Bank Logo">
+                <h2>NeoBank</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li class="active"><a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                    <li><a href="transfer.html"><i class="fas fa-money-bill-transfer"></i> Transfer</a></li>
+                    <li><a href="#"><i class="fas fa-credit-card"></i> Cards</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search transactions...">
+                </div>
+                <div class="user-profile">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="assets/images/user-avatar.png" alt="User Avatar">
+                    <span>John Doe</span>
+                </div>
+            </header>
+
+            <!-- Transactions Content -->
+            <div class="transactions-content">
+                <div class="transactions-header">
+                    <h1>Transaction History</h1>
+                    <div class="transaction-filters">
+                        <div class="filter-dropdown">
+                            <select id="account-filter">
+                                <option value="all">All Accounts</option>
+                                <option value="main">Main Account</option>
+                                <option value="savings">Savings Account</option>
+                            </select>
+                        </div>
+                        <div class="filter-dropdown">
+                            <select id="type-filter">
+                                <option value="all">All Types</option>
+                                <option value="income">Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+                        <div class="date-range">
+                            <input type="date" id="start-date">
+                            <span>to</span>
+                            <input type="date" id="end-date">
+                        </div>
+                        <button class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+
+                <div class="transactions-list-container">
+                    <div class="transactions-summary">
+                        <div class="summary-card">
+                            <h3>Total Income</h3>
+                            <p class="amount positive">+$5,430.00</p>
+                            <p class="period">This Month</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>Total Expenses</h3>
+                            <p class="amount negative">-$1,245.75</p>
+                            <p class="period">This Month</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>Net Balance</h3>
+                            <p class="amount positive">+$4,184.25</p>
+                            <p class="period">This Month</p>
+                        </div>
+                    </div>
+
+                    <div class="transactions-table">
+                        <div class="table-header">
+                            <div class="header-item">Description</div>
+                            <div class="header-item">Date</div>
+                            <div class="header-item">Account</div>
+                            <div class="header-item">Amount</div>
+                            <div class="header-item">Status</div>
+                        </div>
+                        
+                        <div class="table-body">
+                            <!-- Transaction items will be loaded here via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="btn btn-outline"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <div class="page-numbers">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <button class="btn btn-outline">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/transactions.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

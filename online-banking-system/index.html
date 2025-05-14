@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Bank Logo">
+                <h2>NeoBank</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                    <li><a href="transfer.html"><i class="fa-solid fa-money-bill"></i> Transfer</a></li>
+                    <li><a href="#"><i class="fas fa-credit-card"></i> Cards</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="assets/images/user-avatar.png" alt="User Avatar">
+                    <span>Janaki</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <h1>Welcome back, Janaki</h1>
+                
+                <!-- Account Summary -->
+                <div class="account-summary">
+                    <div class="account-card primary">
+                        <h3>Main Account</h3>
+                        <p class="balance">$12,450.50</p>
+                        <p class="account-number">**** **** **** 4567</p>
+                        <div class="account-actions">
+                            <button class="btn btn-sm">Details</button>
+                            <button class="btn btn-sm">Transfer</button>
+                        </div>
+                    </div>
+                    
+                    <div class="account-card secondary">
+                        <h3>Savings Account</h3>
+                        <p class="balance">$8,720.00</p>
+                        <p class="account-number">**** **** **** 8910</p>
+                        <div class="account-actions">
+                            <button class="btn btn-sm">Details</button>
+                            <button class="btn btn-sm">Transfer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <div class="action-item">
+                            <div class="action-icon transfer">
+                                <i class="fas fa-money-bill"></i>
+                            </div>
+                            <p>Transfer</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-icon pay">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <p>Pay Bills</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-icon deposit">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <p>Deposit</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-icon card">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <p>New Card</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="recent-transactions">
+                    <h2>Recent Transactions</h2>
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <p class="transaction-title">Amazon Purchase</p>
+                                <p class="transaction-date">Today, 10:45 AM</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                -$45.99
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <p class="transaction-title">Salary Deposit</p>
+                                <p class="transaction-date">May 1, 9:00 AM</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                +$3,500.00
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <p class="transaction-title">Restaurant Payment</p>
+                                <p class="transaction-date">Apr 28, 7:30 PM</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                -$78.50
+                            </div>
+                        </div>
+                    </div>
+                    <a href="transactions.html" class="view-all">View All Transactions →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

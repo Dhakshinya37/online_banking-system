@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking - Transfer Money</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Bank Logo">
+                <h2>NeoBank</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+                    <li class="active"><a href="transfer.html"><i class="fas fa-money-bill-transfer"></i> Transfer</a></li>
+                    <li><a href="#"><i class="fas fa-credit-card"></i> Cards</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="assets/images/user-avatar.png" alt="User Avatar">
+                    <span>John Doe</span>
+                </div>
+            </header>
+
+            <!-- Transfer Content -->
+            <div class="transfer-content">
+                <h1>Transfer Money</h1>
+                
+                <div class="transfer-container">
+                    <div class="transfer-steps">
+                        <div class="step active">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <p class="step-title">Transfer Details</p>
+                                <p class="step-description">Enter amount and recipient</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <p class="step-title">Confirmation</p>
+                                <p class="step-description">Review your transfer</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <p class="step-title">Complete</p>
+                                <p class="step-description">Transfer successful</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="transferForm" class="transfer-form">
+                        <div class="form-section">
+                            <h2>Transfer Details</h2>
+                            
+                            <div class="form-group">
+                                <label for="from-account">From Account</label>
+                                <select id="from-account" required>
+                                    <option value="">Select account</option>
+                                    <option value="main">Main Account (****4567) - $12,450.50</option>
+                                    <option value="savings">Savings Account (****8910) - $8,720.00</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="to-account">To Account</label>
+                                <div class="account-type-selector">
+                                    <div class="type-option active" data-type="internal">
+                                        <i class="fas fa-user"></i>
+                                        <span>Internal</span>
+                                    </div>
+                                    <div class="type-option" data-type="external">
+                                        <i class="fas fa-university"></i>
+                                        <span>External</span>
+                                    </div>
+                                    <div class="type-option" data-type="mobile">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>Mobile</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipient-selector internal-recipient">
+                                    <select id="internal-recipient" required>
+                                        <option value="">Select recipient</option>
+                                        <option value="jane">Jane Smith (****1234)</option>
+                                        <option value="robert">Robert Johnson (****5678)</option>
+                                        <option value="emily">Emily Davis (****9012)</option>
+                                    </select>
+                                    <button type="button" class="btn btn-outline btn-sm">+ Add New</button>
+                                </div>
+                                
+                                <div class="recipient-selector external-recipient hidden">
+                                    <div class="form-group">
+                                        <label for="bank-name">Bank Name</label>
+                                        <input type="text" id="bank-name" placeholder="Enter bank name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="account-number">Account Number</label>
+                                        <input type="text" id="account-number" placeholder="Enter account number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="account-name">Account Name</label>
+                                        <input type="text" id="account-name" placeholder="Enter account holder name">
+                                    </div>
+                                </div>
+                                
+                                <div class="recipient-selector mobile-recipient hidden">
+                                    <div class="form-group">
+                                        <label for="mobile-provider">Mobile Provider</label>
+                                        <select id="mobile-provider">
+                                            <option value="">Select provider</option>
+                                            <option value="mtn">MTN</option>
+                                            <option value="airtel">Airtel</option>
+                                            <option value="vodafone">Vodafone</option>
+                                            <option value="tigo">Tigo</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mobile-number">Mobile Number</label>
+                                        <input type="tel" id="mobile-number" placeholder="Enter mobile number">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <div class="amount-input">
+                                    <span class="currency">$</span>
+                                    <input type="number" id="amount" placeholder="0.00" min="1" required>
+                                </div>
+                                <div class="balance-info">
+                                    Available balance: <span class="balance-amount">$12,450.50</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="description">Description (Optional)</label>
+                                <input type="text" id="description" placeholder="Enter description">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="schedule">Schedule Transfer</label>
+                                <div class="schedule-options">
+                                    <div class="schedule-option active">
+                                        <input type="radio" id="now" name="schedule" value="now" checked>
+                                        <label for="now">Transfer Now</label>
+                                    </div>
+                                    <div class="schedule-option">
+                                        <input type="radio" id="later" name="schedule" value="later">
+                                        <label for="later">Schedule for Later</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="schedule-date hidden">
+                                    <input type="date" id="transfer-date">
+                                    <input type="time" id="transfer-time">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/transactions.js"></script>
+</body>
+</html>
