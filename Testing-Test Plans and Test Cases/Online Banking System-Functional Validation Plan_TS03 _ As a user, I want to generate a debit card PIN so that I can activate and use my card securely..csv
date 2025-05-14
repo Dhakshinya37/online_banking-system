@@ -1,0 +1,9 @@
+﻿ID,Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+"202","Test Case","Successful Pin Generation",,,,"OnlineBankingSystem","Abinaya Manivannan <231001005@rajalakshmi.edu.in>","Design"
+,,,"1","Log in to the system and navigate to the ""Generate Debit Card PIN"" section.","The user is successfully logged in, and the ""Generate Debit Card PIN"" page or section is displayed.",,,
+,,,"2","Enter the required card details (e.g., card number, expiry date), a new 4-digit PIN, and re-enter the same PIN for confirmation.","The system accepts the card details and both PIN entries without immediate error. The new and confirmation PIN entries should match.",,,
+,,,"3","Click on “Generate PIN” and observe the system feedback.","The system initiates PIN generation and displays a success message: “Debit card PIN generated successfully.”",,,
+"206","Test Case","PIN mismatch during generation",,,,"OnlineBankingSystem","Abinaya Manivannan <231001005@rajalakshmi.edu.in>","Design"
+,,,"1","Log in to the system and navigate to the ""Generate Debit Card PIN"" section.","The user is successfully logged in, and the ""Generate Debit Card PIN"" page or section is displayed.",,,
+,,,"2","Enter the required card details, a new 4-digit PIN, and re-enter a different 4-digit PIN for confirmation.","The system accepts the card details and both PIN entries without immediate error. The new PIN entered in the first instance is different from the confirmation PIN entered in the second instance.",,,
+,,,"3","Click on “Generate PIN” and observe the system feedback.","An error message is displayed to the user indicating that the PIN do not match and the debit card PIN is not generated. ",,,

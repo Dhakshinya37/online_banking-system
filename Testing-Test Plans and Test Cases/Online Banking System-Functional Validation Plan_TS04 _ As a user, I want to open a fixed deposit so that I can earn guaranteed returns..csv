@@ -1,0 +1,9 @@
+﻿ID,Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+"207","Test Case","Successful Fixed Deposit Creation",,,,"OnlineBankingSystem","Anu N <231001014@rajalakshmi.edu.in>","Design"
+,,,"1","Log in to the system and navigate to the ""Open Fixed Deposit"" section.","The user is successfully logged in, and the ""Open Fixed Deposit"" page or section is displayed, showing options for deposit type and tenure.",,,
+,,,"2","Select a deposit type and tenure, enter a valid deposit amount within the allowed range, and select the funding account.","The system accepts the selections and the entered deposit amount without immediate errors. The available funding accounts are displayed for selection.",,,
+,,,"3","Review the terms and conditions and confirm the fixed deposit creation.","Upon confirmation, a success message is displayed  and the details of the newly created fixed deposit are shown or accessible to the user. ",,,
+"209","Test Case","Attempt to open a fixed deposit with an amount below the minimum limit",,,,"OnlineBankingSystem","Anu N <231001014@rajalakshmi.edu.in>","Design"
+,,,"1","Log in to the system and navigate to the ""Open Fixed Deposit"" section.","The user is successfully logged in, and the ""Open Fixed Deposit"" page or section is displayed, showing options for deposit type and tenure.",,,
+,,,"2","Select a deposit type and tenure, and enter a deposit amount that is below the minimum allowed limit.","The system accepts the deposit type and tenure selections and allows the user to enter the deposit amount.",,,
+,,,"3","Attempt to proceed with the fixed deposit creation","The system prevents the creation of the fixed deposit. An error message is displayed to the user indicating that the entered amount is below the minimum allowed limit.",,,

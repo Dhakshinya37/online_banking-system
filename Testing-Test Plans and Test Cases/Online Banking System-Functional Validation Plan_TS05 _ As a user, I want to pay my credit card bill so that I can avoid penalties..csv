@@ -1,0 +1,9 @@
+﻿ID,Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+"211","Test Case","Successful credit card bill payment",,,,"OnlineBankingSystem","Abinaya Manivannan <231001005@rajalakshmi.edu.in>","Design"
+,,,"1","Log in, go to ""Credit Card Payment,"" and select the card.","The user logs in successfully, and the ""Credit Card Payment"" section displays the user's credit card(s) for selection.",,,
+,,,"2","Enter a valid payment amount and choose a payment method (e.g., bank account).","The system accepts the payment amount (within the limit) and displays available payment methods for the user to choose from.",,,
+,,,"3","Confirm the payment details and click “Pay Now”.","A success message appears (""Credit card bill payment successful.""), and the credit card balance is updated to reflect the payment.",,,
+"212","Test Case","Attempt to pay more than the outstanding balance",,,,"OnlineBankingSystem","Abinaya Manivannan <231001005@rajalakshmi.edu.in>","Design"
+,,,"1","Log in, go to ""Credit Card Payment,"" and select the card.","The user logs in successfully, and the ""Credit Card Payment"" section displays the user's credit card(s) for selection.",,,
+,,,"2","Enter a payment amount that is greater than the displayed outstanding balance.","The system accepts the entered amount. It might immediately show a warning or allow proceeding to the next step.",,,
+,,,"3","Attempt to proceed with the payment","The system prevents processing the payment. An error or warning message is shown .",,,

@@ -1,0 +1,9 @@
+﻿ID,Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+"204","Test Case","Fund Transfer-Valid Balance",,,,"OnlineBankingSystem","Aarthi A P <231001003@rajalakshmi.edu.in>","Design"
+,,,"1"," Log in and go to the ""Fund Transfer"" section"," Fund Transfer page is displayed",,,
+,,,"2","Select source and destination accounts, enter valid amount","Amount is accepted; no validation error",,,
+,,,"3","Click ""Transfer"" and confirm the transaction","Success message is shown and balances are updated",,,
+"205","Test Case","Fund Transfer – Insufficient Balance",,,,"OnlineBankingSystem","Aarthi A P <231001003@rajalakshmi.edu.in>","Design"
+,,,"1","Log in and go to the ""Fund Transfer"" section","Fund Transfer page is displayed",,,
+,,,"2","Select source account with low balance, enter transfer amount greater than available balance","Validation error or warning message is shown (e.g., ""Insufficient balance"")",,,
+,,,"3","Click “Transfer” and try to proceed","Transaction is blocked, no funds are deducted",,,
